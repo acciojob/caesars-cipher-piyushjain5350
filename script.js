@@ -29,14 +29,15 @@ const lookup = {
   Z: "M",
   "?": "?",
   ",": ",",
+  " ": " "
 };
 
 function rot13(encodedStr) {
-  let decodedArr = []; // Your Result goes here
+  let decodedArr = ""; // Your Result goes here
   // Only change code below this line
 	for(let i=0;i<encodedStr.length;i++){
 		let a=encodedStr.charAt(i);
-		decodedArr.push(lookup[a]);
+		decodedArr+=lookup[a];
 	}
 
   return decodedArr; //return decodedArr
